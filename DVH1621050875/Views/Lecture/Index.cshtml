@@ -1,0 +1,46 @@
+﻿@model IEnumerable<DVH1621050875.Models.Lecture>
+
+@{
+    ViewBag.Title = "Person";
+}
+
+<h2>List of lectures</h2>
+
+<p>
+	<a href="@Url.Action("Create")" class="btn btn-primary">Create New</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Department)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Faculty)
+        </th>
+        <th width="200"></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+	<td>
+		@Html.DisplayFor(modelItem => item.PersonName)
+	</td>
+	<td>
+		@Html.DisplayFor(modelItem => item.Department)
+	</td>
+	<td>
+		@Html.DisplayFor(modelItem => item.Faculty)
+	</td>
+	<td>
+		@Html.ActionLink("Edit", "Edit", new { id = item.PersonId }) |
+		@Html.ActionLink("Details", "Details", new { id = item.PersonId }) |
+		<a href="@Url.Action("Delete", new { id=item.PersonId })"
+		   onclick="return confirm('Are you sure?');">Delete</a>
+	</td>
+</tr>
+}
+
+</table>

@@ -1,0 +1,56 @@
+﻿@model DVH1621050875.Models.Lecture
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+	<h4>Lecture</h4>
+	<hr />
+	<dl class="dl-horizontal">
+		<dt>
+			@Html.DisplayNameFor(model => model.PersonId)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.PersonId)
+		</dd>
+
+	</dl>
+	<dl class="dl-horizontal">
+		<dt>
+			@Html.DisplayNameFor(model => model.PersonName)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.PersonName)
+		</dd>
+
+	</dl>
+	<dl class="dl-horizontal">
+		<dt>
+			@Html.DisplayNameFor(model => model.Department)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.Department)
+		</dd>
+
+	</dl>
+	<dl class="dl-horizontal">
+		<dt>
+			@Html.DisplayNameFor(model => model.Faculty)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.Faculty)
+		</dd>
+
+	</dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PersonId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
